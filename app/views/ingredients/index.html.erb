@@ -1,0 +1,6 @@
+<h1>Ingredients</h1>
+<%= link_to 'create an ingredient', new_ingredient_path %> | <%= link_to 'show cocktails', cocktails_path %>
+<hr>
+<% @ingredients.each do |ingredient| %>
+<p><%= ingredient.name %> | <%= link_to('delete', ingredient_path(ingredient), method: :delete) %></p>
+<% end %>
